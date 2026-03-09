@@ -1,18 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const navLinks = [
+type NavItem = {
+  label: string;
+  to: string;
+  external?: boolean;
+  children?: { label: string; to: string }[];
+};
+
+const navLinks: NavItem[] = [
   { label: "Home", to: "/" },
-  { label: "About", to: "/about" },
+  {
+    label: "About",
+    to: "/about",
+    children: [
+      { label: "About Us", to: "/about" },
+      { label: "Gallery", to: "/gallery" },
+    ],
+  },
   { label: "Sermons", to: "/sermons" },
   { label: "Ministries", to: "/ministries" },
-  { label: "Events", to: "/events" },
+  { label: "Upcoming Events", to: "/events" },
   { label: "Testimonies", to: "/testimonies" },
   { label: "Branches", to: "/branches" },
-  { label: "Gallery", to: "/gallery" },
+  { label: "Devotional", to: "https://breadandwine.com", external: true },
   { label: "Give", to: "/give" },
   { label: "Contact", to: "/contact" },
 ];
