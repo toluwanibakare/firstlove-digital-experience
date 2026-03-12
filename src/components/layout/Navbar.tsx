@@ -26,7 +26,7 @@ const navLinks: NavItem[] = [
   { label: "Ministries", to: "/ministries" },
   { label: "Events", to: "/events" },
   { label: "Testimonies", to: "/testimonies" },
-  { label: "Devotional", to: "https://breadandwine.com", external: true },
+  { label: "Devotional", to: "https://breadandwinedevotional.com/", external: true },
   { label: "Give", to: "/give" },
   { label: "Contact", to: "/contact" },
 ];

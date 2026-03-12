@@ -4,6 +4,7 @@ import ScrollAnimationWrapper from "@/components/home/ScrollAnimationWrapper";
 import pastorImage from "@/assets/pastor-portrait.jpg";
 
 const ABOUT_IMAGE_URL = "https://www.firstloveassembly.org.ng/images/gallery/19.jpg";
+const BANNER_IMAGE_URL = "https://scontent.flos2-2.fna.fbcdn.net/v/t39.30808-6/643940333_1430792309087515_5116358370011858163_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=j6pBNX-0DfcQ7kNvwFiO8By&_nc_oc=Adk31exh_rFZLnm3-6_QWOODo7vLNbFivCZkaj_bokwM2FWuAvOzSZxROaHEdGuvRXc&_nc_zt=23&_nc_ht=scontent.flos2-2.fna&_nc_gid=FdCeB_L2q_xL4jiWFXU_Uw&_nc_ss=8&oh=00_Afzo5qumTPDF0dQDPBDN91zkB73dvZJyDmoJ8yo7rC6EUw&oe=69B91A38";
 
 const beliefs = [
   "The Bible is the inspired, infallible Word of God",
@@ -19,7 +20,10 @@ const About = () => {
     <div>
       {/* Hero */}
       <section className="relative py-40 overflow-hidden">
-        <div className="absolute inset-0 gradient-bg opacity-95" />
+        <div className="absolute inset-0">
+          <img src={BANNER_IMAGE_URL} alt="About Banner" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 hero-overlay opacity-90" />
+        </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary-foreground mb-4">
             About FirstLove Assembly
