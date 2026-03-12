@@ -84,12 +84,12 @@ const Index = () => {
       </section>
 
       {/* About Preview */}
-      <section className="py-24 section-muted">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimationWrapper direction="left">
               <div className="rounded-2xl overflow-hidden card-elevated">
-                <img src={ABOUT_IMAGE_URL} alt="Church gathering" className="w-full h-[400px] object-cover" />
+                <img src={ABOUT_IMAGE_URL} alt="Church gathering" className="w-full h-64 md:h-[400px] object-cover" />
               </div>
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper direction="right" delay={0.2}>
@@ -144,7 +144,7 @@ const Index = () => {
       </section>
 
       {/* Ministries */}
-      <section className="py-24 section-muted">
+      <section className="py-16 md:py-24 section-muted">
         <div className="container mx-auto px-4">
           <ScrollAnimationWrapper className="text-center mb-16">
             <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">Our Ministries</p>
@@ -155,7 +155,7 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ministries.map((m, i) => (
               <ScrollAnimationWrapper key={m.title} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-8 card-elevated text-center h-full flex flex-col">
+                <div className="bg-card rounded-2xl p-6 md:p-8 card-elevated text-center h-full flex flex-col">
                   <div className="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center mx-auto mb-6">
                     <m.icon size={24} className="text-primary-foreground" />
                   </div>
@@ -207,7 +207,7 @@ const Index = () => {
       </section>
 
       {/* Testimonies */}
-      <section className="py-24 section-muted">
+      <section className="py-16 md:py-24 section-muted">
         <div className="container mx-auto px-4">
           <ScrollAnimationWrapper className="text-center mb-16">
             <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">Testimonies</p>
@@ -218,7 +218,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {testimonies.map((t, i) => (
               <ScrollAnimationWrapper key={t.name} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-8 card-elevated">
+                <div className="bg-card rounded-2xl p-6 md:p-8 card-elevated">
                   <div className="text-4xl text-primary/20 font-heading mb-4">"</div>
                   <p className="text-foreground italic leading-relaxed mb-6">{t.quote}</p>
                   <p className="text-primary font-heading font-semibold text-sm">— {t.name}</p>
@@ -226,11 +226,11 @@ const Index = () => {
               </ScrollAnimationWrapper>
             ))}
           </div>
-          <div className="text-center mt-10 flex justify-center gap-4">
-            <Button size="lg" asChild>
+          <div className="text-center mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <Button size="lg" asChild className="w-full sm:w-auto">
               <Link to="/testimonies">Read More</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
               <Link to="/testimonies">Share Your Testimony</Link>
             </Button>
           </div>
@@ -238,7 +238,7 @@ const Index = () => {
       </section>
 
       {/* Events */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <ScrollAnimationWrapper className="text-center mb-16">
             <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">Upcoming Events</p>
@@ -265,7 +265,7 @@ const Index = () => {
                       </DialogContent>
                     </Dialog>
                   )}
-                  <div className="p-8 flex-1 flex flex-col">
+                  <div className="p-6 md:p-8 flex-1 flex flex-col">
                     <div className="flex items-center gap-2 mb-4">
                       <Calendar size={18} className="text-primary" />
                       <span className="text-primary font-heading font-semibold text-sm">{e.date}</span>
@@ -290,7 +290,7 @@ const Index = () => {
       </section>
 
       {/* Branch Locator Preview */}
-      <section className="py-24 section-muted">
+      <section className="py-16 md:py-24 section-muted">
         <div className="container mx-auto px-4 text-center">
           <ScrollAnimationWrapper>
             <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">Our Branches</p>

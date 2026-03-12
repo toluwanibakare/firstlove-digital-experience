@@ -157,7 +157,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={LOGO_URL} alt="FirstLove Assembly" className="h-10 w-10 object-contain" />
+          <img src={LOGO_URL} alt="FirstLove Assembly" className="h-12 w-12 object-contain" />
           <span className={`font-heading font-bold text-lg tracking-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
             FirstLove Assembly
           </span>

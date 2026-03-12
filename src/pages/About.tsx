@@ -39,7 +39,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimationWrapper direction="left">
-              <img src={ABOUT_IMAGE_URL} alt="Church gathering" className="rounded-2xl w-full h-[400px] object-cover card-elevated" />
+              <img src={ABOUT_IMAGE_URL} alt="Church gathering" className="rounded-2xl w-full h-64 md:h-[400px] object-cover card-elevated" />
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper direction="right" delay={0.2}>
               <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">Our History</p>

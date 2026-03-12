@@ -97,16 +97,16 @@ const Events = () => {
               <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">Coming Up Next</p>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-2">{nextEvent.title}</h2>
               <p className="text-muted-foreground mb-10">{nextEvent.date} • {nextEvent.location}</p>
-              <div className="flex justify-center gap-4 md:gap-8 flex-wrap">
+              <div className="flex justify-center gap-2 md:gap-8">
                 {[
                   { value: countdown.days, label: "Days" },
                   { value: countdown.hours, label: "Hours" },
                   { value: countdown.minutes, label: "Minutes" },
                   { value: countdown.seconds, label: "Seconds" },
                 ].map((unit) => (
-                  <div key={unit.label} className="bg-card rounded-2xl card-elevated p-6 md:p-8 min-w-[90px] md:min-w-[120px]">
-                    <span className="text-4xl md:text-6xl font-heading font-bold gradient-text">{String(unit.value).padStart(2, "0")}</span>
-                    <p className="text-muted-foreground text-sm mt-2 font-medium">{unit.label}</p>
+                  <div key={unit.label} className="bg-card rounded-xl md:rounded-2xl card-elevated p-3 md:p-8 flex-1 max-w-[80px] md:max-w-none md:min-w-[120px]">
+                    <span className="text-2xl md:text-6xl font-heading font-bold gradient-text">{String(unit.value).padStart(2, "0")}</span>
+                    <p className="text-[10px] md:text-sm text-muted-foreground mt-1 md:mt-2 font-medium">{unit.label}</p>
                   </div>
                 ))}
               </div>
@@ -137,7 +137,7 @@ const Events = () => {
                       </DialogContent>
                     </Dialog>
                   )}
-                  <div className="p-8 flex-1 flex flex-col">
+                  <div className="p-6 md:p-8 flex-1 flex flex-col">
                     <div className="flex items-center gap-2 mb-4">
                       <Calendar size={16} className="text-primary" />
                       <span className="text-primary font-heading font-semibold text-sm">{e.date}</span>
