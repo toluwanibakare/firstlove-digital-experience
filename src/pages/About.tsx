@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollAnimationWrapper from "@/components/home/ScrollAnimationWrapper";
 import pastorImage from "@/assets/pastor-portrait.jpg";
-import gatheringImage from "@/assets/church-gathering.jpg";
+
+const ABOUT_IMAGE_URL = "https://www.firstloveassembly.org.ng/images/gallery/19.jpg";
 
 const beliefs = [
   "The Bible is the inspired, infallible Word of God",
@@ -24,7 +25,7 @@ const About = () => {
             About FirstLove Assembly
           </h1>
           <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-            Over 30 years of raising a people established in God to influence society
+            Over 25 years of raising a people established in God to influence society
           </p>
         </div>
       </section>
@@ -34,13 +35,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimationWrapper direction="left">
-              <img src={gatheringImage} alt="Church gathering" className="rounded-2xl w-full h-[400px] object-cover card-elevated" />
+              <img src={ABOUT_IMAGE_URL} alt="Church gathering" className="rounded-2xl w-full h-[400px] object-cover card-elevated" />
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper direction="right" delay={0.2}>
               <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">Our History</p>
               <h2 className="text-3xl font-heading font-bold text-foreground mb-6">A Legacy of Faith</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                FirstLove Assembly began over 30 years ago, originally known as Revival People's Church. Under the visionary leadership of Pastor Simeon Afolabi, the ministry has grown from humble beginnings in Port Harcourt to a multi-branch church spanning across Nigeria.
+                FirstLove Assembly began over 25 years ago, originally known as Revival People's Church. Under the visionary leadership of Pastor Simeon Afolabi, the ministry has grown from humble beginnings in Port Harcourt to a multi-branch church spanning across Nigeria.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 The name change to FirstLove Assembly reflects the church's renewed commitment to returning to the foundational love for God and His purposes, raising believers with apostolic values and building people who influence society.

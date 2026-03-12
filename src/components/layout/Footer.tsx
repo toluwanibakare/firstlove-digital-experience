@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, MapPin, Phone, Mail, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import { Heart, MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -14,16 +14,30 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-bold text-xl mb-4">FirstLove Assembly</h3>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Raising a people established in God to influence society. Over 30 years of impactful ministry across Nigeria.
+              Raising a people established in God to influence society. Over 25 years of impactful ministry across Nigeria.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Instagram, Youtube, Twitter].map((Icon, i) => (
+              {[
+                { Icon: Facebook, href: "https://www.facebook.com/flarumuokwuta/" },
+                { Icon: Instagram, href: "https://www.instagram.com/flarumuokwuta/" },
+                { Icon: Youtube, href: "https://www.youtube.com/@flarumuokwuta" },
+                { 
+                  Icon: () => (
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-[18px] h-[18px]">
+                      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z" />
+                    </svg>
+                  ), 
+                  href: "https://x.com/flarumuokwuta" 
+                },
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors duration-300"
                 >
-                  <Icon size={18} />
+                  <Icon />
                 </a>
               ))}
             </div>
@@ -86,9 +100,17 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">
-          <p>© 2025 FirstLove Assembly. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Built with <Heart size={14} className="text-primary" /> for the Kingdom
+          <p>© 2026 FirstLove Assembly. All rights reserved.</p>
+          <p className="flex items-center gap-1 group">
+            Built with <Heart size={14} className="text-primary fill-primary transition-transform group-hover:scale-125" /> by{" "}
+            <a 
+              href="https://tmb.it.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary-foreground hover:text-primary transition-colors font-medium"
+            >
+              TMB
+            </a>
           </p>
         </div>
       </div>

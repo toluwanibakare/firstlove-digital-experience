@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/logo.png";
+
+const LOGO_URL = "https://firstloveassembly.org.ng/img/FLA_LOGO_MAIN.png";
 
 type NavItem = {
   label: string;
@@ -23,14 +24,12 @@ const navLinks: NavItem[] = [
   },
   { label: "Sermons", to: "/sermons" },
   { label: "Ministries", to: "/ministries" },
-  { label: "Upcoming Events", to: "/events" },
+  { label: "Events", to: "/events" },
   { label: "Testimonies", to: "/testimonies" },
-  { label: "Branches", to: "/branches" },
   { label: "Devotional", to: "https://breadandwine.com", external: true },
   { label: "Give", to: "/give" },
   { label: "Contact", to: "/contact" },
 ];
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -158,7 +157,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="FirstLove Assembly" className="h-10 w-10" />
+          <img src={LOGO_URL} alt="FirstLove Assembly" className="h-10 w-10 object-contain" />
           <span className={`font-heading font-bold text-lg tracking-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
             FirstLove Assembly
           </span>

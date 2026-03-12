@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Play, Users, BookOpen, Calendar, MapPin } from "lucide-react";
+import { ChevronDown, Play, Users, BookOpen, Calendar, MapPin, ZoomIn } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollAnimationWrapper from "@/components/home/ScrollAnimationWrapper";
-import heroImage from "@/assets/hero-worship.jpg";
-import gatheringImage from "@/assets/church-gathering.jpg";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+const HERO_IMAGE_URL = "https://scontent.flos2-2.fna.fbcdn.net/v/t39.30808-6/645416823_1430743589092387_2095965613133377130_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=U0cOIMTkXUwQ7kNvwEvXOgj&_nc_oc=AdnbMd7shVm4k718hurFAW5FeFstDBxfA-Q8R9In6IJ3b020Xx2FhyxFmCObjPxnkdo&_nc_zt=23&_nc_ht=scontent.flos2-2.fna&_nc_gid=_ErWCEzTfpHA2-GKTSXXnA&_nc_ss=8&oh=00_AfwyHGypBVKewGs8J_74e7c6gA4awZjlhXar4YoySBSr0w&oe=69B92321";
 import pastorImage from "@/assets/pastor-portrait.jpg";
+
+const ABOUT_IMAGE_URL = "https://www.firstloveassembly.org.ng/images/gallery/19.jpg";
 
 const ministries = [
   { title: "Men Ministry", desc: "Empowering men to lead with integrity and purpose in their families, workplaces, and communities.", icon: Users },
@@ -21,9 +27,9 @@ const sermons = [
 ];
 
 const events = [
-  { title: "Sunday Worship Service", date: "Every Sunday", location: "Main Auditorium", time: "8:00 AM & 10:30 AM" },
-  { title: "Midweek Service", date: "Every Wednesday", location: "Main Auditorium", time: "6:00 PM" },
-  { title: "Annual Conference 2025", date: "April 14-18, 2025", location: "Port Harcourt", time: "All Day" },
+  { title: "Morning Aerobics", date: "Saturday, 14th March 2026", location: "Church Premises (Ikwerre Road)", time: "7:00 AM", image: "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/649941067_1440439401456139_5935728156196885287_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=LX71WTiJQQUQ7kNvwGghIUL&_nc_oc=AdmYQdLGrwydlgtkOZwJu-wCaq-hmqqk3REavlqtLqpQhwAzSpSpw0awzkQnGGPBHyA&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=7kxj7ZpDMcQ2Y2sak9xQjw&_nc_ss=8&oh=00_Afwbi-Szh1XvSSwR7QIU_j5sJWz5zdLdVjbJntJIW69H2A&oe=69B91A70" },
+  { title: "Midweek Service", date: "Every Wednesday", location: "Main Auditorium", time: "6:00 PM", image: "https://scontent.flos3-2.fna.fbcdn.net/v/t39.30808-6/651192583_1439429791557100_6147572413689043047_n.jpg?stp=c0.117.1246.1246a_dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=Wyj9BsREYPcQ7kNvwEXOncA&_nc_oc=AdnQ0Y9R2H5AWXeyAh1PQidAesUGEuvXSib5OzsUoPkZXn4QHvwab_GMClW1RM_IXZU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_gid=7kxj7ZpDMcQ2Y2sak9xQjw&_nc_ss=8&oh=00_AfxmfHDO6ltI-1l9gQPPH7626v_w2MiEniQQ9v5u9NfsIg&oe=69B92C6B" },
+  { title: "Sunday Worship Service", date: "Every Sunday", location: "Main Auditorium", time: "8:00 AM & 10:30 AM", image: "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/633649869_1415150657318347_3954834390277084289_n.jpg?stp=c0.87.1335.1335a_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=ZYM_ZpYAj-4Q7kNvwFiJPnN&_nc_oc=AdnULKtToaiecCV8RREH1s0462f6-Gotvvr-k9YPXQBKVqlz5xOnOUM6KJDI3KWcSbo&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=SBNk8y3I1lAwBElyYpsD-g&_nc_ss=8&oh=00_AfyOUq4Z-tXlWHOkzVryGguS6hN8_pNXKyP_Hs-5-Yk7bQ&oe=69B8F792" },
 ];
 
 const testimonies = [
@@ -38,7 +44,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Worship at FirstLove Assembly" className="w-full h-full object-cover" />
+          <img src={HERO_IMAGE_URL} alt="Worship at FirstLove Assembly" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -83,16 +89,16 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimationWrapper direction="left">
               <div className="rounded-2xl overflow-hidden card-elevated">
-                <img src={gatheringImage} alt="Church gathering" className="w-full h-[400px] object-cover" />
+                <img src={ABOUT_IMAGE_URL} alt="Church gathering" className="w-full h-[400px] object-cover" />
               </div>
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper direction="right" delay={0.2}>
               <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">About Us</p>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-                Over 30 Years of Impactful Ministry
+                Over 25 Years of Impactful Ministry
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                FirstLove Assembly, formerly known as Revival People's Church, has been a beacon of faith and transformation for over three decades. Under the visionary leadership of Pastor Simeon Afolabi, the ministry has grown from its roots in Port Harcourt to multiple branches across Nigeria.
+                FirstLove Assembly, formerly known as Revival People's Church, has been a beacon of faith and transformation for over two decades. Under the visionary leadership of Pastor Simeon Afolabi, the ministry has grown from its roots in Port Harcourt to multiple branches across Nigeria.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Our mission is to raise believers with apostolic values, restore Christian faith practice, and build people to influence society and the world.
@@ -126,7 +132,7 @@ const Index = () => {
                 <h3 className="font-heading font-bold text-xl text-foreground mb-1">Pastor Simeon Afolabi</h3>
                 <p className="text-primary font-medium text-sm mb-4">Founder & Serving Overseer</p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                  A visionary leader with over 30 years of ministry experience, Pastor Simeon Afolabi founded FirstLove Assembly with a burning passion to raise a people established in God to influence society.
+                  A visionary leader with over 25 years of ministry experience, Pastor Simeon Afolabi founded FirstLove Assembly with a burning passion to raise a people established in God to influence society.
                 </p>
                 <Button variant="outline" asChild>
                   <Link to="/about">Read Full Profile</Link>
@@ -243,20 +249,39 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {events.map((e, i) => (
               <ScrollAnimationWrapper key={e.title} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-8 card-elevated border border-border">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Calendar size={18} className="text-primary" />
-                    <span className="text-primary font-heading font-semibold text-sm">{e.date}</span>
+                <div className="bg-card rounded-2xl overflow-hidden card-elevated border border-border flex flex-col h-full group">
+                  {e.image && (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="relative h-64 overflow-hidden bg-muted/30 cursor-pointer">
+                          <img src={e.image} alt={e.title} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <ZoomIn className="text-white w-8 h-8" />
+                          </div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl p-0 overflow-hidden bg-transparent border-none">
+                        <img src={e.image} alt={e.title} className="w-full h-auto object-contain max-h-[90vh]" />
+                      </DialogContent>
+                    </Dialog>
+                  )}
+                  <div className="p-8 flex-1 flex flex-col">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Calendar size={18} className="text-primary" />
+                      <span className="text-primary font-heading font-semibold text-sm">{e.date}</span>
+                    </div>
+                    <h3 className="font-heading font-bold text-lg text-foreground mb-2">{e.title}</h3>
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm mb-1">
+                      <MapPin size={14} />
+                      <span>{e.location}</span>
+                    </div>
+                    <p className="text-muted-foreground text-sm mb-6">{e.time}</p>
+                    <div className="mt-auto">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link to="/events">Learn More</Link>
+                      </Button>
+                    </div>
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-foreground mb-2">{e.title}</h3>
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm mb-1">
-                    <MapPin size={14} />
-                    <span>{e.location}</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-6">{e.time}</p>
-                  <Button variant="outline" size="sm" asChild>
-                    <Link to="/events">Learn More</Link>
-                  </Button>
                 </div>
               </ScrollAnimationWrapper>
             ))}
@@ -287,7 +312,7 @@ const Index = () => {
       {/* CTA */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Worship" className="w-full h-full object-cover" />
+          <img src={HERO_IMAGE_URL} alt="Worship" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
