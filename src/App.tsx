@@ -19,6 +19,7 @@ import Branches from "./pages/Branches";
 import Gallery from "./pages/Gallery";
 import Give from "./pages/Give";
 import Contact from "./pages/Contact";
+import Livestream from "./pages/Livestream";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/give" element={<Give />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/livestream" element={<Livestream />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

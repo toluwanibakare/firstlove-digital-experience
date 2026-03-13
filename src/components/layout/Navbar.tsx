@@ -24,7 +24,14 @@ const navLinks: NavItem[] = [
   },
   { label: "Sermons", to: "/sermons" },
   { label: "Ministries", to: "/ministries" },
-  { label: "Events", to: "/events" },
+  {
+    label: "Events",
+    to: "/events",
+    children: [
+      { label: "Our Events", to: "/events" },
+      { label: "LIVE", to: "/livestream" },
+    ],
+  },
   { label: "Testimonies", to: "/testimonies" },
   { label: "Devotional", to: "https://breadandwinedevotional.com/", external: true },
   { label: "Give", to: "/give" },
@@ -169,7 +176,7 @@ const Navbar = () => {
 
         <div className="hidden lg:block">
           <Button variant="hero" size="lg" asChild>
-            <Link to="/contact">Plan Your Visit</Link>
+            <Link to="/branches">Plan Your Visit</Link>
           </Button>
         </div>
 
@@ -186,7 +193,7 @@ const Navbar = () => {
           <div className="flex flex-col gap-1">
             {navLinks.map(link => renderLink(link, true))}
             <Button variant="hero" size="lg" className="mt-3" asChild>
-              <Link to="/contact">Plan Your Visit</Link>
+              <Link to="/branches">Plan Your Visit</Link>
             </Button>
           </div>
         </div>
