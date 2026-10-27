@@ -14,8 +14,8 @@ const events = [
   {
     title: "National Convention 2026",
     date: "October 28 – November 1, 2026",
-    targetDate: "2026-10-28T09:00:00",
-    time: "9:00 AM & 5:00 PM daily; Anniversary Service 7:30 AM Sunday",
+    targetDate: "2026-10-28T17:00:00",
+    time: "Opens Wed 5:00 PM; Thu–Sat 9:00 AM & 5:00 PM; Anniversary Service Sun 7:30 AM",
     location: "FirstLove Assembly, 457 Ikwerre Road, Rumuokwuta, Port Harcourt",
     desc: "Making the Invisible God Visible. Five days of Word, worship, prayer, fellowship and divine encounters as we celebrate 28 years of God's faithfulness. Hosted by Pastor Simeon Afolabi with Pastor Mrs. Ruth Afolabi, featuring Bishop Norman Jonah, Rev. Joseph Akinyele and Pastor Chris Ugoh, with music from Preye Odede, Victory Hope, GodsWill Frank, Akunna Alioha, Mimi Joy, New Spring Choir and Voice of Pilgrims. Sessions stream on Facebook and YouTube.",
     image: ""

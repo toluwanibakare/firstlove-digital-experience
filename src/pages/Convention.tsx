@@ -85,7 +85,7 @@ const Convention = () => {
                 <Clock size={28} className="text-primary mb-4" />
                 <h3 className="font-heading font-bold text-lg mb-2">Session Times</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Morning sessions 9:00 AM, evening sessions 5:00 PM, and the anniversary service on Sunday at 7:30 AM. Sessions also stream on Facebook and YouTube.
+                  Opens Wednesday at 5:00 PM. Thursday to Saturday: morning sessions 9:00 AM and evening sessions 5:00 PM. Sunday: the 28th anniversary celebration service at 7:30 AM. Sessions also stream on Facebook and YouTube.
                 </p>
               </div>
             </ScrollAnimationWrapper>
