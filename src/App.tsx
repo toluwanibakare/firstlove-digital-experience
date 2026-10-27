@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Sermons from "./pages/Sermons";
 import Ministries from "./pages/Ministries";
 import Events from "./pages/Events";
+import Convention from "./pages/Convention";
 import Testimonies from "./pages/Testimonies";
 import Branches from "./pages/Branches";
 import Gallery from "./pages/Gallery";
@@ -55,6 +56,7 @@ const App = () => {
               <Route path="/sermons" element={<Sermons />} />
               <Route path="/ministries" element={<Ministries />} />
               <Route path="/events" element={<Events />} />
+              <Route path="/convention" element={<Convention />} />
               <Route path="/testimonies" element={<Testimonies />} />
               <Route path="/branches" element={<Branches />} />
               <Route path="/gallery" element={<Gallery />} />

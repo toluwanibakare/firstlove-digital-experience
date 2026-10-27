@@ -29,6 +29,7 @@ const navLinks: NavItem[] = [
     to: "/events",
     children: [
       { label: "Our Events", to: "/events" },
+      { label: "National Convention 2026", to: "/convention" },
       { label: "LIVE", to: "/livestream" },
     ],
   },

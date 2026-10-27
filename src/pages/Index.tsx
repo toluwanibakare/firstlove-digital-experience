@@ -21,13 +21,12 @@ const ministries = [
 ];
 
 const sermons = [
-  { title: "Walking in Divine Purpose", speaker: "Pastor Simeon Afolabi", date: "March 2, 2025" },
-  { title: "The Power of First Love", speaker: "Pastor Simeon Afolabi", date: "Feb 23, 2025" },
-  { title: "Established in God", speaker: "Pastor Simeon Afolabi", date: "Feb 16, 2025" },
+  { title: "Faith For The Journey Ahead", speaker: "Pastor Funsho Nathaniel", date: "October 4, 2026" },
+  { title: "The Power of Words For Health and Healing", speaker: "Pastor Linus Ochai", date: "October 4, 2026" },
 ];
 
 const events = [
-  { title: "Morning Aerobics", date: "Saturday, 14th March 2026", location: "Church Premises (Ikwerre Road)", time: "7:00 AM", image: "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/649941067_1440439401456139_5935728156196885287_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=LX71WTiJQQUQ7kNvwGghIUL&_nc_oc=AdmYQdLGrwydlgtkOZwJu-wCaq-hmqqk3REavlqtLqpQhwAzSpSpw0awzkQnGGPBHyA&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=7kxj7ZpDMcQ2Y2sak9xQjw&_nc_ss=8&oh=00_Afwbi-Szh1XvSSwR7QIU_j5sJWz5zdLdVjbJntJIW69H2A&oe=69B91A70" },
+  { title: "National Convention 2026", date: "October 28 – November 1, 2026", location: "457 Ikwerre Road, Rumuokwuta, Port Harcourt", time: "9:00 AM & 5:00 PM daily; Anniversary Service 7:30 AM Sunday", image: "" },
   { title: "Midweek Service", date: "Every Wednesday", location: "Main Auditorium", time: "6:00 PM", image: "https://scontent.flos3-2.fna.fbcdn.net/v/t39.30808-6/651192583_1439429791557100_6147572413689043047_n.jpg?stp=c0.117.1246.1246a_dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=Wyj9BsREYPcQ7kNvwEXOncA&_nc_oc=AdnQ0Y9R2H5AWXeyAh1PQidAesUGEuvXSib5OzsUoPkZXn4QHvwab_GMClW1RM_IXZU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_gid=7kxj7ZpDMcQ2Y2sak9xQjw&_nc_ss=8&oh=00_AfxmfHDO6ltI-1l9gQPPH7626v_w2MiEniQQ9v5u9NfsIg&oe=69B92C6B" },
   { title: "Sunday Worship Service", date: "Every Sunday", location: "Main Auditorium", time: "8:00 AM & 10:30 AM", image: "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/633649869_1415150657318347_3954834390277084289_n.jpg?stp=c0.87.1335.1335a_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=ZYM_ZpYAj-4Q7kNvwFiJPnN&_nc_oc=AdnULKtToaiecCV8RREH1s0462f6-Gotvvr-k9YPXQBKVqlz5xOnOUM6KJDI3KWcSbo&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=SBNk8y3I1lAwBElyYpsD-g&_nc_ss=8&oh=00_AfyOUq4Z-tXlWHOkzVryGguS6hN8_pNXKyP_Hs-5-Yk7bQ&oe=69B8F792" },
 ];
@@ -83,6 +82,35 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* National Convention 2026 Banner */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 gradient-bg" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <ScrollAnimationWrapper>
+            <p className="text-primary-foreground/70 font-heading text-sm tracking-[0.3em] uppercase mb-3">
+              National Convention 2026 • 28th Anniversary
+            </p>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">
+              Making the Invisible God Visible
+            </h2>
+            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-2">
+              Wednesday, October 28 – Sunday, November 1, 2026
+            </p>
+            <p className="text-primary-foreground/70 max-w-2xl mx-auto mb-8">
+              Morning sessions 9:00 AM, evening sessions 5:00 PM, anniversary service Sunday 7:30 AM, at 457 Ikwerre Road, Rumuokwuta, Port Harcourt.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/convention">View Convention Details</Link>
+              </Button>
+              <Button variant="hero-outline" size="xl" asChild>
+                <Link to="/events">See All Events</Link>
+              </Button>
+            </div>
+          </ScrollAnimationWrapper>
+        </div>
+      </section>
+
       {/* About Preview */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -95,7 +123,7 @@ const Index = () => {
             <ScrollAnimationWrapper direction="right" delay={0.2}>
               <p className="text-primary font-heading font-semibold text-sm tracking-widest uppercase mb-3">About Us</p>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-                Over 25 Years of Impactful Ministry
+                28 Years of Impactful Ministry
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 FirstLove Assembly, formerly known as Revival People's Church, has been a beacon of faith and transformation for over two decades. Under the visionary leadership of Pastor Simeon Afolabi, the ministry has grown from its roots in Port Harcourt to multiple branches across Nigeria.

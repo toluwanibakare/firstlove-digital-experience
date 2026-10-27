@@ -11,14 +11,14 @@ import {
 const BANNER_IMAGE_URL = "https://scontent.flos2-1.fna.fbcdn.net/v/t39.30808-6/639832226_1424232186410194_1844922625544653163_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=qmK6ypP6l3YQ7kNvwHUd2Qk&_nc_oc=Adl7lirjlRh9ZESiJNWl5-veY1RjYAxwLzLi7bA9g0GM-Hw3pFJiINT90RGUScfVPLM&_nc_zt=23&_nc_ht=scontent.flos2-1.fna&_nc_gid=5y9GZsOtjliLt4lvxjJj_g&_nc_ss=8&oh=00_AfzhsqC01W742ZoB4D2gBrX9g4vOj79M1HgfYK_lUx-FRg&oe=69B918AA";
 
 const events = [
-  { 
-    title: "Morning Aerobics", 
-    date: "Saturday, 14th March 2026", 
-    targetDate: "2026-03-14T07:00:00", 
-    time: "7:00 AM", 
-    location: "Church Premises (Ikwerre Road)", 
-    desc: "The Men’s Fellowship of FirstLove Assembly Rumuokwuta warmly invites everyone — men and women — to join us for a refreshing Morning Aerobics Session. Exercise strengthens the body, refreshes the mind, and builds fellowship.",
-    image: "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/649941067_1440439401456139_5935728156196885287_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=LX71WTiJQQUQ7kNvwGghIUL&_nc_oc=AdmYQdLGrwydlgtkOZwJu-wCaq-hmqqk3REavlqtLqpQhwAzSpSpw0awzkQnGGPBHyA&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=7kxj7ZpDMcQ2Y2sak9xQjw&_nc_ss=8&oh=00_Afwbi-Szh1XvSSwR7QIU_j5sJWz5zdLdVjbJntJIW69H2A&oe=69B91A70"
+  {
+    title: "National Convention 2026",
+    date: "October 28 – November 1, 2026",
+    targetDate: "2026-10-28T09:00:00",
+    time: "9:00 AM & 5:00 PM daily; Anniversary Service 7:30 AM Sunday",
+    location: "FirstLove Assembly, 457 Ikwerre Road, Rumuokwuta, Port Harcourt",
+    desc: "Making the Invisible God Visible. Five days of Word, worship, prayer, fellowship and divine encounters as we celebrate 28 years of God's faithfulness. Hosted by Pastor Simeon Afolabi with Pastor Mrs. Ruth Afolabi, featuring Bishop Norman Jonah, Rev. Joseph Akinyele and Pastor Chris Ugoh, with music from Preye Odede, Victory Hope, GodsWill Frank, Akunna Alioha, Mimi Joy, New Spring Choir and Voice of Pilgrims. Sessions stream on Facebook and YouTube.",
+    image: ""
   },
   { 
     title: "Midweek Service", 

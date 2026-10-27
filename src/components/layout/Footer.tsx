@@ -14,7 +14,7 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-bold text-xl mb-4">FirstLove Assembly</h3>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Raising a people established in God to influence society. Over 25 years of impactful ministry across Nigeria.
+              Raising a people established in God to influence society. 28 years of impactful ministry across Nigeria.
             </p>
             <div className="flex gap-3">
               {[
