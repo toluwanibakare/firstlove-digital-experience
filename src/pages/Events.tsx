@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Calendar, MapPin, Clock, ZoomIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollAnimationWrapper from "@/components/home/ScrollAnimationWrapper";
+import heroWorship from "@/assets/hero-worship.jpg";
+import churchGathering from "@/assets/church-gathering.jpg";
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-const BANNER_IMAGE_URL = "https://scontent.flos2-1.fna.fbcdn.net/v/t39.30808-6/639832226_1424232186410194_1844922625544653163_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=qmK6ypP6l3YQ7kNvwHUd2Qk&_nc_oc=Adl7lirjlRh9ZESiJNWl5-veY1RjYAxwLzLi7bA9g0GM-Hw3pFJiINT90RGUScfVPLM&_nc_zt=23&_nc_ht=scontent.flos2-1.fna&_nc_gid=5y9GZsOtjliLt4lvxjJj_g&_nc_ss=8&oh=00_AfzhsqC01W742ZoB4D2gBrX9g4vOj79M1HgfYK_lUx-FRg&oe=69B918AA";
 
 const events = [
   {
@@ -18,7 +19,7 @@ const events = [
     time: "Opens Wed 5:00 PM; Thu–Sat 9:00 AM & 5:00 PM; Anniversary Service Sun 7:30 AM",
     location: "FirstLove Assembly, 457 Ikwerre Road, Rumuokwuta, Port Harcourt",
     desc: "Making the Invisible God Visible. Five days of Word, worship, prayer, fellowship and divine encounters as we celebrate 28 years of God's faithfulness. Hosted by Pastor Simeon Afolabi with Pastor Mrs. Ruth Afolabi, featuring Bishop Norman Jonah, Rev. Joseph Akinyele and Pastor Chris Ugoh, with music from Preye Odede, Victory Hope, GodsWill Frank, Akunna Alioha, Mimi Joy, New Spring Choir and Voice of Pilgrims. Sessions stream on Facebook and YouTube.",
-    image: ""
+    image: "/images/convention-flyer.jpg"
   },
   { 
     title: "Midweek Service", 
@@ -27,7 +28,7 @@ const events = [
     time: "6:00 PM", 
     location: "Main Auditorium, Ikwerre Road", 
     desc: "Recharge your faith midweek with Bible study and prayer.",
-    image: "https://scontent.flos3-2.fna.fbcdn.net/v/t39.30808-6/651192583_1439429791557100_6147572413689043047_n.jpg?stp=c0.117.1246.1246a_dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=Wyj9BsREYPcQ7kNvwEXOncA&_nc_oc=AdnQ0Y9R2H5AWXeyAh1PQidAesUGEuvXSib5OzsUoPkZXn4QHvwab_GMClW1RM_IXZU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_gid=7kxj7ZpDMcQ2Y2sak9xQjw&_nc_ss=8&oh=00_AfxmfHDO6ltI-1l9gQPPH7626v_w2MiEniQQ9v5u9NfsIg&oe=69B92C6B"
+    image: churchGathering
   },
   { 
     title: "Sunday Worship Service", 
@@ -36,7 +37,7 @@ const events = [
     time: "8:00 AM & 10:30 AM", 
     location: "Main Auditorium, Port Harcourt", 
     desc: "Join us for powerful worship, the Word, and fellowship every Sunday.",
-    image: "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/633649869_1415150657318347_3954834390277084289_n.jpg?stp=c0.87.1335.1335a_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=ZYM_ZpYAj-4Q7kNvwFiJPnN&_nc_oc=AdnULKtToaiecCV8RREH1s0462f6-Gotvvr-k9YPXQBKVqlz5xOnOUM6KJDI3KWcSbo&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=SBNk8y3I1lAwBElyYpsD-g&_nc_ss=8&oh=00_AfyOUq4Z-tXlWHOkzVryGguS6hN8_pNXKyP_Hs-5-Yk7bQ&oe=69B8F792"
+    image: heroWorship
   },
 ];
 
@@ -80,7 +81,7 @@ const Events = () => {
     <div>
       <section className="relative py-40 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={BANNER_IMAGE_URL} alt="Events Banner" className="w-full h-full object-cover" />
+          <img src={heroWorship} alt="Events Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-overlay opacity-90" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">

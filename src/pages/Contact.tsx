@@ -1,15 +1,15 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollAnimationWrapper from "@/components/home/ScrollAnimationWrapper";
+import heroWorship from "@/assets/hero-worship.jpg";
 
-const BANNER_IMAGE_URL = "https://scontent.flos2-1.fna.fbcdn.net/v/t39.30808-6/648398827_1436838391816240_3932467202997996039_n.jpg?stp=c205.0.1638.1638a_dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=a934a8&_nc_ohc=_hpjSHWZ5skQ7kNvwFIi9gi&_nc_oc=Adk8IKgyX-gPu7WfErwOpY6LxNuSjw-NnfUvDAFZapIBe5zq7FwczSHTjoj_H0ZNKxY&_nc_zt=23&_nc_ht=scontent.flos2-1.fna&_nc_gid=gnnLClLsmO9EHkGdmusYoQ&_nc_ss=8&oh=00_AfxjPmaUsGLr_GOZVGzvjGmbNkOkIml_fia264_SjuvB2Q&oe=69B90F8F";
 
 const Contact = () => {
   return (
     <div>
       <section className="relative py-40 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={BANNER_IMAGE_URL} alt="Contact Banner" className="w-full h-full object-cover" />
+          <img src={heroWorship} alt="Contact Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-overlay opacity-90" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">

@@ -58,6 +58,20 @@ const Convention = () => {
         </div>
       </section>
 
+
+      {/* Flyer */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 text-center">
+          <ScrollAnimationWrapper>
+            <img
+              src="/images/convention-flyer.jpg"
+              alt="FirstLove Assembly National Convention 2026 flyer: Making the Invisible God Visible, October 28 to November 1, 2026"
+              className="mx-auto w-full max-w-xl rounded-2xl card-elevated"
+            />
+          </ScrollAnimationWrapper>
+        </div>
+      </section>
+
       {/* Details */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">

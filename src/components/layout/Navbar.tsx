@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const LOGO_URL = "https://firstloveassembly.org.ng/img/FLA_LOGO_MAIN.png";
 
+
 type NavItem = {
   label: string;
   to: string;

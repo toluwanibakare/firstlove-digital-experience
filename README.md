@@ -1,73 +1,34 @@
-# Welcome to your Lovable project
+# FirstLove Assembly Digital Experience
 
-## Project info
+The website for FirstLove Assembly, Port Harcourt, Nigeria. Built for the church by Toluwani Bakare.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About the church
 
-## How can I edit this code?
+FirstLove Assembly is headquartered at 457 Ikwerre Road, Rumuokwuta, Port Harcourt, Rivers State, Nigeria. Phone: +234 803 452 3300. Email: info@firstloveassembly.org.ng. Social handles: @flarumuokwuta on Facebook, Instagram, X and YouTube.
 
-There are several ways of editing your application.
+## Pages
 
-**Use Lovable**
+Home, About, Sermons, Ministries, Events, Testimonies, Branches, Gallery, Give, Contact, Livestream, and a dedicated National Convention page at `/convention`.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Tech stack
 
-Changes made via Lovable will be committed automatically to this repo.
+Vite, React, TypeScript, Tailwind CSS, shadcn-ui, React Router.
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Running it locally
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Building for production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+```
 
-**Use GitHub Codespaces**
+This produces a static `dist/` folder that can be hosted on any static host. Preview a production build with `npm run preview`.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Images
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+All images used by the site live in the repo under `src/assets/` and `public/images/`. Do not hotlink images from social media CDNs: those signed links expire and the images silently stop loading.

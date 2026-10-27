@@ -8,10 +8,12 @@ import {
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
-const HERO_IMAGE_URL = "https://scontent.flos2-2.fna.fbcdn.net/v/t39.30808-6/645416823_1430743589092387_2095965613133377130_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=U0cOIMTkXUwQ7kNvwEvXOgj&_nc_oc=AdnbMd7shVm4k718hurFAW5FeFstDBxfA-Q8R9In6IJ3b020Xx2FhyxFmCObjPxnkdo&_nc_zt=23&_nc_ht=scontent.flos2-2.fna&_nc_gid=_ErWCEzTfpHA2-GKTSXXnA&_nc_ss=8&oh=00_AfwyHGypBVKewGs8J_74e7c6gA4awZjlhXar4YoySBSr0w&oe=69B92321";
 import pastorImage from "@/assets/pastor-portrait.jpg";
+import heroWorship from "@/assets/hero-worship.jpg";
+import churchGathering from "@/assets/church-gathering.jpg";
 
 const ABOUT_IMAGE_URL = "https://www.firstloveassembly.org.ng/images/gallery/19.jpg";
+
 
 const ministries = [
   { title: "Men Ministry", desc: "Empowering men to lead with integrity and purpose in their families, workplaces, and communities.", icon: Users },
@@ -27,8 +29,8 @@ const sermons = [
 
 const events = [
   { title: "National Convention 2026", date: "October 28 – November 1, 2026", location: "457 Ikwerre Road, Rumuokwuta, Port Harcourt", time: "Opens Wed 5:00 PM; Thu–Sat 9:00 AM & 5:00 PM; Anniversary Service Sun 7:30 AM", image: "" },
-  { title: "Midweek Service", date: "Every Wednesday", location: "Main Auditorium", time: "6:00 PM", image: "https://scontent.flos3-2.fna.fbcdn.net/v/t39.30808-6/651192583_1439429791557100_6147572413689043047_n.jpg?stp=c0.117.1246.1246a_dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=Wyj9BsREYPcQ7kNvwEXOncA&_nc_oc=AdnQ0Y9R2H5AWXeyAh1PQidAesUGEuvXSib5OzsUoPkZXn4QHvwab_GMClW1RM_IXZU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_gid=7kxj7ZpDMcQ2Y2sak9xQjw&_nc_ss=8&oh=00_AfxmfHDO6ltI-1l9gQPPH7626v_w2MiEniQQ9v5u9NfsIg&oe=69B92C6B" },
-  { title: "Sunday Worship Service", date: "Every Sunday", location: "Main Auditorium", time: "8:00 AM & 10:30 AM", image: "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/633649869_1415150657318347_3954834390277084289_n.jpg?stp=c0.87.1335.1335a_dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=ZYM_ZpYAj-4Q7kNvwFiJPnN&_nc_oc=AdnULKtToaiecCV8RREH1s0462f6-Gotvvr-k9YPXQBKVqlz5xOnOUM6KJDI3KWcSbo&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=SBNk8y3I1lAwBElyYpsD-g&_nc_ss=8&oh=00_AfyOUq4Z-tXlWHOkzVryGguS6hN8_pNXKyP_Hs-5-Yk7bQ&oe=69B8F792" },
+  { title: "Midweek Service", date: "Every Wednesday", location: "Main Auditorium", time: "6:00 PM", image: churchGathering },
+  { title: "Sunday Worship Service", date: "Every Sunday", location: "Main Auditorium", time: "8:00 AM & 10:30 AM", image: heroWorship },
 ];
 
 const testimonies = [
@@ -43,7 +45,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_IMAGE_URL} alt="Worship at FirstLove Assembly" className="w-full h-full object-cover" />
+          <img src={heroWorship} alt="Worship at FirstLove Assembly" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -340,7 +342,7 @@ const Index = () => {
       {/* CTA */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_IMAGE_URL} alt="Worship" className="w-full h-full object-cover" />
+          <img src={heroWorship} alt="Worship" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
